@@ -1,6 +1,7 @@
-import { Promise, connect } from 'mongoose';
+import * as mongoose from 'mongoose';
 
-Promise = global.Promise;
+mongoose.connect('mongodb://mongodb/meusgastos', {
+    useMongoClient: true,
+});
 
 
-export default connect('mongodb://mongodb/meusgastos');
