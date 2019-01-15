@@ -10,3 +10,5 @@ server.use(json());
 server.listen(port, function () {
     console.log('API IS RUN!!!')
 })
+
+module.exports = server;

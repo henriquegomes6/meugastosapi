@@ -1,7 +1,5 @@
 import mongoose from 'mongoose';
 
-
-
 mongoose.connect('mongodb://mongodb:27017/meusgastos', {
     useNewUrlParser: true,
     auth: {
