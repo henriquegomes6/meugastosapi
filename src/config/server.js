@@ -11,4 +11,4 @@ server.listen(port, function () {
     console.log('API IS RUN!!!')
 })
 
-module.exports = server;
+export default server;

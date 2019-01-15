@@ -28,4 +28,4 @@ const billingCycleSchema = new mongoose.Schema({
 });
 
 
-module.exports = restful.model('BillingCycle', billingCycleSchema);
+export default restful.model('BillingCycle', billingCycleSchema);
