@@ -1,7 +1,13 @@
 import BillingCycle from './billingCycle';
+import handler from '../exceptions/handler';
 
 BillingCycle.methods(['get', 'post', 'put', 'delete']);
 BillingCycle.updateOptions({ new: true, runValidators: true });
+BillingCycle
+    .after('post', handler)
+    .after('put', handler)
+    .after('delete', handler)
+    .after('get', handler);
 
 BillingCycle.route('count', (req, res, next) => {
     BillingCycle.count((error, value) => {
