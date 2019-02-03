@@ -1,4 +1,8 @@
 version: '2.1'
+volumes:
+  # MySQL Data
+  sandbox-mongo-data:
+    driver: local
 
 services:
   meugastosapi:
@@ -18,7 +22,7 @@ services:
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
-    # volumes:
-    #   - ./data/db:/data/db
+    volumes:
+      - sandbox-mongo-data:/data/db
     ports:
         - "27017:27017"
