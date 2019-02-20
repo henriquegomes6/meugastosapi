@@ -1,6 +1,5 @@
 version: '2.1'
 volumes:
-  # MySQL Data
   sandbox-mongo-data:
     driver: local
 
